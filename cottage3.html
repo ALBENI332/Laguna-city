@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color:black;">
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <img class="logo" src="./img/Logo Laguna 2.png" alt="">
+                <div class="btns">
+                    <div class="header__btn-home">Home</div>
+                    <div style="background: rgb(81, 9, 120);" class="header__btn-cottages">Cottages</div>
+                    <div class="header__btn-gallary">Gallery</div>
+                    <div class="header__btn-contact" onclick="scrollToBottom()">Contact</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="c161">
+        <div class="container">
+            <div class="c161__content">
+                <div class="c161__slider">
+                    <div class="slider">
+                        <div class="slides">
+                            <div class="slide"><img src="./img/10,3/1.png" alt="Slide 1"></div>
+                            <div class="slide"><img src="./img/10,3/2.png" alt="Slide 2"></div>
+                            <div class="slide"><img src="./img/10,3/3.png" alt="Slide 3"></div>
+                            <div class="slide"><img src="./img/10,3/4.png" alt="Slide 4"></div>
+                            <div class="slide"><img src="./img/10,3/5.png" alt="Slide 5"></div>
+                            <div class="slide"><img src="./img/10,3/6.png" alt="Slide 6"></div>
+                        </div>
+                        <button class="prev">❮</button>
+                        <button class="next">❯</button>
+                    </div>
+                    <div class="thumbnails">
+                        <img src="./img/10,3/1.png" class="thumbnail" alt="Thumb 1">
+                        <img src="./img/10,3/2.png" class="thumbnail" alt="Thumb 2">
+                        <img src="./img/10,3/3.png" class="thumbnail" alt="Thumb 3">
+                        <img src="./img/10,3/4.png" class="thumbnail" alt="Thumb 4">
+                        <img src="./img/10,3/5.png" class="thumbnail" alt="Thumb 5">
+                        <img src="./img/10,3/6.png" class="thumbnail" alt="Thumb 6">
+                    </div>
+                </div>
+                <div class="c161__info">
+                    <h2 class="c161__title">Cottage 10/3</h2>
+                    <p class="c161__badrooms">2 bedrooms</p>
+                    <h2 class="c161__price">$120</h2>
+                    <p class="c161__night">per night</p>
+                    <button class="c161__btn" onclick="showChoicePanel()">Book the cottage</button>
+                    <br><br>
+                    <div class="dec">
+                        <div class="description-container">
+                            <div class="description-toggle" onclick="toggleDescription()">Description</div>
+                            <div class="description-preview">
+                                <p>This cottage will be more comfortable for a company of 3-6 people.</p>
+                            </div>
+                            <div class="description-full" id="descriptionContent">
+                                <p>This cottage will be more comfortable for a company of 3-6 people.</p>
+                                <p>We have thought of everything for you with love for a comfortable stay.
+                                    You don't have to think what to bring from the usual household appliances. The cottage is equipped with a microwave oven, a toaster, a slow cooker, a geyser coffee maker for lovers of morning coffee in the adjacent recreation area to your cottage.
+                                    We made sure that you have everything: threads, needles, scissors, openers, a garlic press, knives, openers, a cauldron, a frying pan, a saucepan and various kinds of cups for cooking.
+                                    You can take any drinks and not worry about the dishes for them: from glasses to wine glasses. You have enough dishes for all your meals!
+                                    Beach and bath towels will not be your concern when you go on holiday with us.
+                                    Want a personal umbrella and the beach - and you have it.
+                                    And what is a vacation without barbecue and grill? There is also a barbecue and barbecue sticks for you. But if the hostess wants to bake something, then there is baking paper and foil.
+                                    Got dirty? No problem! Washing machine at your service!
+                                    Can't unanimously choose a program to watch? Just turn on two TVs in different rooms and enjoy your vacation!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c161__assortment">
+                        <div class="c161__groups">
+                            <img class="c161__img" src="./img/16,3,1/shower.png" alt="">
+                            <p class="c161__subtitle">1 Shower rooms</p>
+                        </div>
+                        <div class="c161__groups">
+                            <img class="c161__img" src="./img/16,3,1/bbq.png" alt="">
+                            <p class="c161__subtitle">BBQ</p>
+                        </div>
+                        <div class="c161__groups">
+                            <img class="c161__img" src="./img/kitchen.png" alt="">
+                            <p class="c161__subtitle"> Kitchen</p>
+                        </div>
+                        <div class="c161__groups">
+                            <img class="c161__img" src="./img/16,3,1/bed.png" alt="">
+                            <p class="c161__subtitle">2 bedrooms</p>
+                        </div>
+                        <div class="c161__groups">
+                            <img class="c161__img" src="./img/wifi.png" alt="">
+                            <p class="c161__subtitle">Wi-fi</p>
+                        </div>
+                    </div>
+                    <div class="overlay" onclick="hideChoicePanel()"></div>
+                <div class="choice-panel" id="choicePanel">
+                  <button onclick="goToTelegram()">Telegram</button>
+                  <button onclick="goToWhatsApp()">WhatsApp</button>
+                </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__start">
+                    <img class="footer__img" src="./img/footer.png" alt="">
+                    <div class="footer__info">
+                        <h3 class="footer__title">
+                            Contact us
+                        </h3>
+                        <div class="footer__numbers">
+                            <img src="./img/telefon.png" alt="">
+                            <p class="footer__sub__title">+996(550)98-21-21 +996(555)52-08-58</p>
+                        </div>
+
+                        <div class="footer__numbers">
+                            <img src="./img/uim_whatsapp.png" alt="">
+                            <p class="footer__sub__title">+996(550)98-21-21 +996(555)52-08-58</p>
+                        </div>
+
+                        <div class="footer__numbers">
+                            <img src="./img/telega.png" alt="">
+                            <p class="footer__sub__title">+996(550)98-21-21 +996(555)52-08-58</p>
+                        </div>
+
+                        <div class="footer__numbers">
+                            <img src="./img/basil_instagram-solid.png" alt="">
+                            <p class="footer__sub__title">+996(550)98-21-21 +996(555)52-08-58</p>
+                        </div>
+                    </div>
+                </div>
+                <iframe class="maps"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64468.46207637231!2d77.47297261912031!3d42.6906683690495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388447ef7db54fe3%3A0x9696292302f839b!2z0KbQtdC90YLRgCDQvtGC0LTRi9GF0LAgItCb0LDQs9GD0L3QsCDQodC40YLQuCIgKExhZ3VuYSBDaXR5KQ!5e0!3m2!1sen!2skg!4v1751788953998!5m2!1sen!2skg"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const btn__cottages = document.querySelector('.header__btn-cottages')
+
+    btn__cottages.addEventListener('click', () => {
+        window.location.href = 'cottages.html';
+    });
+
+    const btn__home = document.querySelector('.header__btn-home')
+    const btn__home2 = document.querySelector('.logo')
+
+    btn__home.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+
+    btn__home2.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+
+
+    let slideIndex = 0;
+    const slides = document.querySelector('.slides');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    function showSlide(index) {
+        if (index >= slides.children.length) slideIndex = 0;
+        if (index < 0) slideIndex = slides.children.length - 1;
+        slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+        thumbnails.forEach((thumb, i) => thumb.classList.toggle('active', i === slideIndex));
+    }
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        slideIndex--;
+        showSlide(slideIndex);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        slideIndex++;
+        showSlide(slideIndex);
+    });
+
+    thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            slideIndex = index;
+            showSlide(slideIndex);
+        });
+    });
+
+    showSlide(slideIndex);
+
+    function toggleDescription() {
+        const content = document.getElementById('descriptionContent');
+        content.classList.toggle('active');
+    }
+
+    function scrollToBottom() {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function toggleDescription() {
+      const content = document.getElementById('descriptionContent');
+      content.classList.toggle('active');
+    }
+    function showChoicePanel() {
+      document.getElementById('choicePanel').style.display = 'block';
+      document.querySelector('.overlay').style.display = 'block';
+    }
+    function hideChoicePanel() {
+      document.getElementById('choicePanel').style.display = 'none';
+      document.querySelector('.overlay').style.display = 'none';
+    }
+    function goToTelegram() {
+      window.location.href = "https://t.me/"; 
+      hideChoicePanel();
+    }
+    function goToWhatsApp() {
+      window.location.href = "https://wa.me/+996550982121"; 
+      hideChoicePanel();
+    }
+</script>
+
+</html>

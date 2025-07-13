@@ -15,57 +15,54 @@
                 <img class="logo" src="./img/Logo Laguna 2.png" alt="">
                 <div class="btns">
                     <div class="header__btn-home">Home</div>
-                    <div style="background: rgb(81, 9, 120);" class="header__btn-cottages">Cottages</div>
+                    <div class="header__btn-cottages">Cottages</div>
                     <div class="header__btn-gallary">Gallery</div>
-                    <div class="header__btn-contact" onclick="scrollToBottom()">Contact</div>
+                    <div style="background: rgb(81, 9, 120);" class="header__btn-contact" onclick="scrollToBottom()">Contact</div>
                 </div>
             </div>
         </div>
     </header>
-    <br><br><br>
-    <main>
-        <section class="cottages">
-            <div class="container">
-                <div class="cottages__content">
-                    <div class="cottages__cards">
-                        <div class="cottages__card-1631">
-                            <img src="./img/161.png" alt="" class="cottages__img">
-                            <h2 class="cottages__title">Cottage 16/3</h2>
-                            <p class="cottages__floor">Firth floor</p>
-                            <p class="cottages__badrooms">2 Bedrooms</p>
-                            <h3 class="cottages__price">$150</h3>
-                        </div>
+    <br><br><br><br>
+    <section class="contact">
+        <div class="container">
+            <div class="contact__content">
+                <div class="contact__main">
+                    <hi class="contact__title">Get In Touch</hi>
+                    <div class="contact__group">
+                        <img src="./img/Vector1.svg" alt="">
+                        <h3 class="contact__under-title">Address
+                            <br><span class="contact__under-par">Kozhoyar 103, Issyk-Kul, Kyrgyzstan</span>
+                        </h3>
 
-                        <div class="cottages__card-1632">
-                            <img src="./img/161vip.png" alt="" class="cottages__img">
-                            <h2 class="cottages__title">Cottage 16/3</h2>
-                            <p class="cottages__floor">Second floor</p>
-                            <p class="cottages__badrooms">2 Bedrooms</p>
-                            <h3 class="cottages__price">$150</h3>
-                        </div>
-
-                        <div class="cottages__card-103">
-                            <img src="./img/103.png" alt="" class="cottages__img">
-                            <h2 class="cottages__title">Cottage 10/3</h2>
-                            <p class="cottages__floor">Firth floor</p>
-                            <p class="cottages__badrooms">2 Bedrooms</p>
-                            <h3 class="cottages__price">$120</h3>
-                        </div>
-
-                        <div class="cottages__card-161vip">
-                            <img src="./img/161vip.png" alt="" class="cottages__img">
-                            <h2 class="cottages__title">Cottage 16/1</h2>
-                            <p class="cottages__floor">Firth floor</p>
-                            <p class="cottages__badrooms">1 Bedrooms</p>
-                            <h3 class="cottages__price">$90</h3>
-                        </div>
 
                     </div>
+
+                    <div class="contact__group">
+                        <img src="./img/Vector2.svg" alt="">
+                        <div class="contact__under-group">
+                            <h3 class="contact__under-title">Call Us
+                                <br><span class="contact__under-par">+996 550-98-21-21</span>
+                                <br><span class="contact__under-par">+996 555-52-08-58</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="contact__group">
+                        <img src="./img/Vector3.svg" alt="">
+                        <div class="contact__under-group">
+                            <h3 class="contact__under-title">Send Message
+                                <br><span class="contact__under-par">aidarka@gmail.com</span>
+                                <br><span class="contact__under-par">tatka@gmail.com</span>
+                            </h3>
+
+                        </div>
+                    </div>
                 </div>
+                <img src="./img/contact__img.png" alt="">
             </div>
-        </section>
-    </main>
-    <br><br><br><br><br><br>
+        </div>
+    </section>
+    <br><br><br><br>
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
@@ -107,19 +104,10 @@
 <script>
     const btn__home = document.querySelector('.header__btn-home')
     const btn__home2 = document.querySelector('.logo')
-    const cottage1 = document.querySelector('.cottages__card-1631')
-    const cottage2 = document.querySelector('.cottages__card-1632')
-    const cottage3 = document.querySelector('.cottages__card-103')
-    const cottage4 = document.querySelector('.cottages__card-161vip')
-    const btn__contact = document.querySelector('.header__btn-contact')
     const btn__gallery = document.querySelector('.header__btn-gallary')
 
     btn__gallery.addEventListener('click', () => {
         window.location.href = 'gallery.html';
-    });
-
-    btn__contact.addEventListener('click', () => {
-        window.location.href = 'contact.html';
     });
 
     btn__home.addEventListener('click', () => {
@@ -130,25 +118,12 @@
         window.location.href = 'index.html';
     });
 
-    cottage1.addEventListener('click', () => {
-        window.location.href = 'cottage1.html';
+    const btn__cottages = document.querySelector('.header__btn-cottages')
+
+    btn__cottages.addEventListener('click', () => {
+        window.location.href = 'cottages.html';
     });
 
-    cottage2.addEventListener('click', () => {
-        window.location.href = 'cottage2.html';
-    });
-
-    cottage3.addEventListener('click', () => {
-        window.location.href = 'cottage3.html';
-    });
-
-    cottage4.addEventListener('click', () => {
-        window.location.href = 'cottage4.html';
-    });
-
-    // function scrollToBottom() {
-    //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    // }
 </script>
 
 </html>

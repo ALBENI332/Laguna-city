@@ -17,7 +17,7 @@
                     <div class="header__btn-home">Home</div>
                     <div style="background: rgb(81, 9, 120);" class="header__btn-cottages">Cottages</div>
                     <div class="header__btn-gallary">Gallery</div>
-                    <div class="header__btn-contact" onclick="scrollToBottom()">Contact</div>
+                    <div class="header__btn-contact" >Contact</div>
                 </div>
             </div>
         </div>
@@ -143,11 +143,22 @@
 </body>
 <script>
     const btn__cottages = document.querySelector('.header__btn-cottages')
+    const btn__contact = document.querySelector('.header__btn-contact')
+    const btn__gallery = document.querySelector('.header__btn-gallary')
+
+    btn__gallery.addEventListener('click', () => {
+        window.location.href = 'gallery.html';
+    });
+
+    btn__contact.addEventListener('click', () => {
+        window.location.href = 'contact.html';
+    });
 
     btn__cottages.addEventListener('click', () => {
         window.location.href = 'cottages.html';
     });
 
+    
     const btn__home = document.querySelector('.header__btn-home')
     const btn__home2 = document.querySelector('.logo')
 
@@ -195,9 +206,9 @@
       content.classList.toggle('active');
     }
 
-    function scrollToBottom() {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+    // function scrollToBottom() {
+    //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    // }
 
     function toggleDescription() {
       const content = document.getElementById('descriptionContent');

@@ -63,14 +63,22 @@
                             <div class="description-full" id="descriptionContent">
                                 <p>This cottage will be more comfortable for a company of 3-6 people.</p>
                                 <p>We have thought of everything for you with love for a comfortable stay.
-                                    You don't have to think what to bring from the usual household appliances. The cottage is equipped with a microwave oven, a toaster, a slow cooker, a geyser coffee maker for lovers of morning coffee in the adjacent recreation area to your cottage.
-                                    We made sure that you have everything: threads, needles, scissors, openers, a garlic press, knives, openers, a cauldron, a frying pan, a saucepan and various kinds of cups for cooking.
-                                    You can take any drinks and not worry about the dishes for them: from glasses to wine glasses. You have enough dishes for all your meals!
+                                    You don't have to think what to bring from the usual household appliances. The
+                                    cottage is equipped with a microwave oven, a toaster, a slow cooker, a geyser coffee
+                                    maker for lovers of morning coffee in the adjacent recreation area to your cottage.
+                                    We made sure that you have everything: threads, needles, scissors, openers, a garlic
+                                    press, knives, openers, a cauldron, a frying pan, a saucepan and various kinds of
+                                    cups for cooking.
+                                    You can take any drinks and not worry about the dishes for them: from glasses to
+                                    wine glasses. You have enough dishes for all your meals!
                                     Beach and bath towels will not be your concern when you go on holiday with us.
                                     Want a personal umbrella and the beach - and you have it.
-                                    And what is a vacation without barbecue and grill? There is also a barbecue and barbecue sticks for you. But if the hostess wants to bake something, then there is baking paper and foil.
+                                    And what is a vacation without barbecue and grill? There is also a barbecue and
+                                    barbecue sticks for you. But if the hostess wants to bake something, then there is
+                                    baking paper and foil.
                                     Got dirty? No problem! Washing machine at your service!
-                                    Can't unanimously choose a program to watch? Just turn on two TVs in different rooms and enjoy your vacation!</p>
+                                    Can't unanimously choose a program to watch? Just turn on two TVs in different rooms
+                                    and enjoy your vacation!</p>
                             </div>
                         </div>
                     </div>
@@ -97,14 +105,14 @@
                         </div>
                     </div>
                     <div class="overlay" onclick="hideChoicePanel()"></div>
-                <div class="choice-panel" id="choicePanel">
-                  <button onclick="goToTelegram()">Telegram</button>
-                  <button onclick="goToWhatsApp()">WhatsApp</button>
+                    <div class="choice-panel" id="choicePanel">
+                        <button onclick="goToTelegram()">Telegram</button>
+                        <button onclick="goToWhatsApp()">WhatsApp</button>
+                    </div>
                 </div>
-                </div>
-                </div>
-
             </div>
+
+        </div>
         </div>
     </section>
     <br><br><br><br>
@@ -147,6 +155,17 @@
     </footer>
 </body>
 <script>
+    const btn__gallery = document.querySelector('.header__btn-gallary')
+
+    btn__gallery.addEventListener('click', () => {
+        window.location.href = 'gallery.html';
+    });
+    const btn__contact = document.querySelector('.header__btn-contact')
+
+    btn__contact.addEventListener('click', () => {
+        window.location.href = 'contact.html';
+    });
+
     const btn__cottages = document.querySelector('.header__btn-cottages')
 
     btn__cottages.addEventListener('click', () => {
@@ -200,29 +219,29 @@
         content.classList.toggle('active');
     }
 
-    function scrollToBottom() {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+    // function scrollToBottom() {
+    //     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    // }
 
     function toggleDescription() {
-      const content = document.getElementById('descriptionContent');
-      content.classList.toggle('active');
+        const content = document.getElementById('descriptionContent');
+        content.classList.toggle('active');
     }
     function showChoicePanel() {
-      document.getElementById('choicePanel').style.display = 'block';
-      document.querySelector('.overlay').style.display = 'block';
+        document.getElementById('choicePanel').style.display = 'block';
+        document.querySelector('.overlay').style.display = 'block';
     }
     function hideChoicePanel() {
-      document.getElementById('choicePanel').style.display = 'none';
-      document.querySelector('.overlay').style.display = 'none';
+        document.getElementById('choicePanel').style.display = 'none';
+        document.querySelector('.overlay').style.display = 'none';
     }
     function goToTelegram() {
-      window.location.href = "https://t.me/"; 
-      hideChoicePanel();
+        window.location.href = "https://t.me/";
+        hideChoicePanel();
     }
     function goToWhatsApp() {
-      window.location.href = "https://wa.me/+996550982121"; 
-      hideChoicePanel();
+        window.location.href = "https://wa.me/+996550982121";
+        hideChoicePanel();
     }
 </script>
 

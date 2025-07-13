@@ -58,23 +58,29 @@
                         <div class="description-container">
                             <div class="description-toggle" onclick="toggleDescription()">Description</div>
                             <div class="description-preview">
-                              <p>This cottage was created as for itself. A family of 2-5 people can comfortably accommodate here. For you there is a green secluded corner far from human eyes in the</p>
+                                <p>This cottage was created as for itself. A family of 2-5 people can comfortably
+                                    accommodate here. For you there is a green secluded corner far from human eyes in
+                                    the</p>
                             </div>
                             <div class="description-full" id="descriptionContent">
-                              <p>This cottage was created as for itself. A family of 2-5 people can comfortably accommodate here. For you there is a green secluded corner far from human eyes in the shade of greenery and the smell of coniferous plants. In this area you will cook both shish kebab and pilaf on the fire and barbecue.
-                                The cottage has a stove, microwave, coffee maker, toast, multicooker and microwave.
-                                All the utensils that you may need are also in abundance.
-                                Towels for the shower and for the beach, blankets to wrap
-                                up for comfort are also waiting for you.
-                                You will just have to bring yourself and personal belongings and all food preferences for cooking.
-                                TV, refrigerator, washing machine are also at your service!</p>
+                                <p>This cottage was created as for itself. A family of 2-5 people can comfortably
+                                    accommodate here. For you there is a green secluded corner far from human eyes in
+                                    the shade of greenery and the smell of coniferous plants. In this area you will cook
+                                    both shish kebab and pilaf on the fire and barbecue.
+                                    The cottage has a stove, microwave, coffee maker, toast, multicooker and microwave.
+                                    All the utensils that you may need are also in abundance.
+                                    Towels for the shower and for the beach, blankets to wrap
+                                    up for comfort are also waiting for you.
+                                    You will just have to bring yourself and personal belongings and all food
+                                    preferences for cooking.
+                                    TV, refrigerator, washing machine are also at your service!</p>
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="c161__assortment">
                         <div class="c161__groups">
                             <img class="c161__img" src="./img/16,3,1/shower.png" alt="">
-                            <p class="c161__subtitle">1  Shower rooms</p>
+                            <p class="c161__subtitle">1 Shower rooms</p>
                         </div>
                         <div class="c161__groups">
                             <img class="c161__img" src="./img/16,3,1/bbq.png" alt="">
@@ -96,12 +102,12 @@
                 </div>
                 <div class="overlay" onclick="hideChoicePanel()"></div>
                 <div class="choice-panel" id="choicePanel">
-                  <button onclick="goToTelegram()">Telegram</button>
-                  <button onclick="goToWhatsApp()">WhatsApp</button>
+                    <button onclick="goToTelegram()">Telegram</button>
+                    <button onclick="goToWhatsApp()">WhatsApp</button>
                 </div>
-                </div>
-
             </div>
+
+        </div>
         </div>
     </section>
     <br><br><br><br>
@@ -144,6 +150,17 @@
     </footer>
 </body>
 <script>
+    const btn__gallery = document.querySelector('.header__btn-gallary')
+
+    btn__gallery.addEventListener('click', () => {
+        window.location.href = 'gallery.html';
+    });
+
+    const btn__contact = document.querySelector('.header__btn-contact')
+
+    btn__contact.addEventListener('click', () => {
+        window.location.href = 'contact.html';
+    });
     const btn__cottages = document.querySelector('.header__btn-cottages')
 
     btn__cottages.addEventListener('click', () => {
@@ -193,34 +210,34 @@
     showSlide(slideIndex);
 
     function toggleDescription() {
-      const content = document.getElementById('descriptionContent');
-      content.classList.toggle('active');
+        const content = document.getElementById('descriptionContent');
+        content.classList.toggle('active');
     }
 
-    function scrollToBottom() {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+    // function scrollToBottom() {
+    //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    // }
 
 
     function toggleDescription() {
-      const content = document.getElementById('descriptionContent');
-      content.classList.toggle('active');
+        const content = document.getElementById('descriptionContent');
+        content.classList.toggle('active');
     }
     function showChoicePanel() {
-      document.getElementById('choicePanel').style.display = 'block';
-      document.querySelector('.overlay').style.display = 'block';
+        document.getElementById('choicePanel').style.display = 'block';
+        document.querySelector('.overlay').style.display = 'block';
     }
     function hideChoicePanel() {
-      document.getElementById('choicePanel').style.display = 'none';
-      document.querySelector('.overlay').style.display = 'none';
+        document.getElementById('choicePanel').style.display = 'none';
+        document.querySelector('.overlay').style.display = 'none';
     }
     function goToTelegram() {
-      window.location.href = "https://t.me/"; 
-      hideChoicePanel();
+        window.location.href = "https://t.me/";
+        hideChoicePanel();
     }
     function goToWhatsApp() {
-      window.location.href = "https://wa.me/+996550982121"; 
-      hideChoicePanel();
+        window.location.href = "https://wa.me/+996550982121";
+        hideChoicePanel();
     }
 </script>
 

@@ -142,7 +142,16 @@
     
     const btn__cottages = document.querySelector('.header__btn-cottages')
     const btn__cottages2 = document.querySelector('.hero__btn-cottages')
+    const btn__contact = document.querySelector('.header__btn-contact')
+    const btn__gallery = document.querySelector('.header__btn-gallary')
 
+    btn__gallery.addEventListener('click', () => {
+        window.location.href = 'gallery.html';
+    });
+
+    btn__contact.addEventListener('click', () => {
+        window.location.href = 'contact.html';
+    });
 
     btn__cottages.addEventListener('click', () => {
         window.location.href = 'cottages.html';
@@ -152,9 +161,11 @@
         window.location.href = 'cottages.html';
     });
 
-    function scrollToBottom() {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+    x
+
+    // function scrollToBottom() {
+    //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    // }
 </script>
 
 </html>

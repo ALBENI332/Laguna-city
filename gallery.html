@@ -22,7 +22,8 @@
             </div>
         </div>
     </header>
-    <section class="gallery">
+    <!-- <section class="gallery">
+
         <div class="container">
             <div class="gallery__content">
                 <h2 class="gallery__title">Territory</h2>
@@ -54,7 +55,7 @@
                 <h2 class="gallery__title">Our cottages</h2>
                 <div class="photo__grid">
                     <div class="column11">
-                        <img src="./img/cottages/1.png" alt="" class="photo" onclick="openModal(0)">
+                        <img src="./img/cottages/1.png" alt="" class="photo" onclick="openModal(10)">
                         <img src="./img/cottages/2.png" alt="" class="photo" onclick="openModal(1)">
                         <img src="./img/cottages/3.png" alt="" class="photo" onclick="openModal(2)">
                         <img src="./img/cottages/4.png" alt="" class="photo" onclick="openModal(3)">
@@ -83,7 +84,66 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+    <section class="gallery">
+        <div class="container">
+          <div class="gallery__content">
+            <h2 class="gallery__title">Territory</h2>
+            <div class="photo__grid">
+              <div class="column1">
+                <img src="./img/territory/1.png" alt="Photo 1" class="photo" onclick="openModal(0, false)"> <!-- Index 0 -->
+                <img src="./img/territory/5.png" alt="Photo 5" class="photo" onclick="openModal(4, false)"> <!-- Index 4 -->
+                <img src="./img/territory/7.png" alt="Photo 7" class="photo" onclick="openModal(6, false)"> <!-- Index 6 -->
+              </div>
+              <div class="column2">
+                <div class="row1">
+                  <img src="./img/territory/2.png" alt="Photo 2" class="photo" onclick="openModal(1, false)"> <!-- Index 1 -->
+                  <div class="column3">
+                    <img src="./img/territory/3.png" alt="Photo 3" class="photo" onclick="openModal(2, false)"> <!-- Index 2 -->
+                    <img src="./img/territory/4.png" alt="Photo 4" class="photo" onclick="openModal(3, false)"> <!-- Index 3 -->
+                  </div>
+                </div>
+                <img style="max-width: 808px;" src="./img/territory/6.png" alt="Photo 6" class="photo" onclick="openModal(5, false)"> <!-- Index 5 -->
+                <div class="row2">
+                  <img src="./img/territory/8.png" alt="Photo 8" class="photo" onclick="openModal(7, false)"> <!-- Index 7 -->
+                  <img src="./img/territory/9.png" alt="Photo 9" class="photo" onclick="openModal(8, false)"> <!-- Index 8 -->
+                </div>
+              </div>
+            </div>
+            <br><br>
+            <h2 class="gallery__title">Our cottages</h2>
+            <div class="photo__grid">
+              <div class="column11">
+                <img src="./img/cottages/1.png" alt="Cottage 1" class="photo" onclick="openModal(0, true)"> <!-- Index 0 -->
+                <img src="./img/cottages/2.png" alt="Cottage 2" class="photo" onclick="openModal(1, true)"> <!-- Index 1 -->
+                <img src="./img/cottages/3.png" alt="Cottage 3" class="photo" onclick="openModal(2, true)"> <!-- Index 2 -->
+                <img src="./img/cottages/4.png" alt="Cottage 4" class="photo" onclick="openModal(3, true)"> <!-- Index 3 -->
+              </div>
+              <div class="column">
+                <div class="row11">
+                  <div class="column22">
+                    <img src="./img/cottages/5.png" alt="Cottage 5" class="photo" onclick="openModal(4, true)"> <!-- Index 4 -->
+                    <img src="./img/cottages/6.png" alt="Cottage 6" class="photo" onclick="openModal(5, true)"> <!-- Index 5 -->
+                    <img src="./img/cottages/7.png" alt="Cottage 7" class="photo" onclick="openModal(6, true)"> <!-- Index 6 -->
+                  </div>
+                  <div class="column33">
+                    <img src="./img/cottages/8.png" alt="Cottage 8" class="photo" onclick="openModal(7, true)"> <!-- Index 7 -->
+                    <img src="./img/cottages/9.png" alt="Cottage 9" class="photo" onclick="openModal(8, true)"> <!-- Index 8 -->
+                    <img src="./img/cottages/10.png" alt="Cottage 10" class="photo" onclick="openModal(9, true)"> <!-- Index 9 -->
+                  </div>
+                </div>
+                <img style="max-width: 810px;" src="./img/cottages/11.png" alt="Cottage 11" class="photo" onclick="openModal(10, true)"> <!-- Index 10 -->
+              </div>
+            </div>
+          </div>
+          <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">×</span>
+            <img class="modal-content" id="modalImage">
+          </div>
+        </div>
+      </section>
     <br><br><br><br>
     <footer class="footer">
         <div class="container">
@@ -124,11 +184,11 @@
     </footer>
 </body>
 <script>
-
-    const btn__cottages = document.querySelector('.header__btn-cottages')
-    const btn__contact = document.querySelector('.header__btn-contact')
-    const btn__home = document.querySelector('.header__btn-home')
-    const btn__home2 = document.querySelector('.logo')
+    // Навигация по кнопкам
+    const btn__cottages = document.querySelector('.header__btn-cottages');
+    const btn__contact = document.querySelector('.header__btn-contact');
+    const btn__home = document.querySelector('.header__btn-home');
+    const btn__home2 = document.querySelector('.logo');
 
     btn__contact.addEventListener('click', () => {
         window.location.href = 'contact.html';
@@ -145,9 +205,9 @@
     btn__home2.addEventListener('click', () => {
         window.location.href = 'index.html';
     });
-    
 
-    const images = [
+    // Массивы с путями к изображениям
+    const territoryImages = [
         './img/territory/1.png',
         './img/territory/2.png',
         './img/territory/3.png',
@@ -159,59 +219,40 @@
         './img/territory/9.png'
     ];
 
-    function openModal(index) {
+    const cottagesImages = [
+        './img/cottages/1.png',
+        './img/cottages/2.png',
+        './img/cottages/3.png',
+        './img/cottages/4.png',
+        './img/cottages/5.png',
+        './img/cottages/6.png',
+        './img/cottages/7.png',
+        './img/cottages/8.png',
+        './img/cottages/9.png',
+        './img/cottages/10.png',
+        './img/cottages/11.png'
+    ];
+
+    // Функция для открытия модального окна
+    function openModal(index, isCottages = false) {
         const modal = document.getElementById('modal');
         const modalImage = document.getElementById('modalImage');
         modal.style.display = 'flex';
-        modalImage.src = images[index];
+        modalImage.src = isCottages ? cottagesImages[index] : territoryImages[index];
     }
 
+    // Функция для закрытия модального окна
     function closeModal() {
         const modal = document.getElementById('modal');
         modal.style.display = 'none';
     }
 
-    document.getElementById('modal').addEventListener('click', function (event) {
+    // Закрытие модального окна при клике вне изображения
+    document.getElementById('modal').addEventListener('click', function(event) {
         if (event.target === this) {
             closeModal();
         }
     });
-
-    // Массив с путями к изображениям (в том же порядке, что и в HTML)
-const images2 = [
-    './img/cottages/1.png',
-    './img/cottages/2.png',
-    './img/cottages/3.png',
-    './img/cottages/4.png',
-    './img/cottages/5.png',
-    './img/cottages/6.png',
-    './img/cottages/7.png',
-    './img/cottages/8.png',
-    './img/cottages/9.png',
-    './img/cottages/10.png',
-    './img/cottages/11.png'
-];
-
-// Функция для открытия модального окна
-function openModal(index) {
-    const modal = document.getElementById('modal');
-    const modalImage = document.getElementById('modalImage');
-    modal.style.display = 'flex';
-    modalImage.src = images2[index];
-}
-
-// Функция для закрытия модального окна
-function closeModal() {
-    const modal = document.getElementById('modal');
-    modal.style.display = 'none';
-}
-
-// Закрытие модального окна при клике вне изображения
-document.getElementById('modal').addEventListener('click', function(event) {
-    if (event.target === this) {
-        closeModal();
-    }
-});
 </script>
 
 </html>

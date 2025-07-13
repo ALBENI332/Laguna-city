@@ -572,9 +572,8 @@
     justify-content: center;
 }
 
-/* Стили для модального окна */
-.modal {
-    display: none; /* Скрыто по умолчанию */
+/* .modal {
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -636,6 +635,84 @@
     .modal-content {
         width: 95vw;
         max-height: 90vh;
+    }
+
+    .close {
+        font-size: 30px;
+        right: 20px;
+        top: 15px;
+    }
+} */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 80vw; /* Уменьшено с 90vw до 80vw */
+    height: auto; 
+    max-width: 1000px; /* Уменьшено с 1400px до 1000px */
+    max-height: 80vh; /* Уменьшено с 95vh до 80vh */
+    margin: auto;
+    display: block;
+    object-fit: contain; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 0;
+    min-height: 0;
+    /* Улучшение рендеринга изображения */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    max-width: none; 
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+.photo {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90vw; /* Уменьшено с 95vw до 90vw */
+        max-height: 70vh; /* Уменьшено с 90vh до 70vh */
     }
 
     .close {

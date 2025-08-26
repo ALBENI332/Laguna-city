@@ -48,8 +48,23 @@
                     </div>
                 </div>
                 <div class="c161__info">
-                    <h2 class="c161__title">Cottage 16/3
-                        Second floor</h2>
+                    <div class="qwe">
+                        <h2 class="c161__title">Cottage 16/3
+                            Seconde floor</h2>
+                        <!-- Кнопка для открытия видео -->
+                        <button onclick="openVideo()" class="video-btn">Open video</button>
+
+                        <!-- Модальное окно -->
+                        <div id="videoModal" class="video-modal">
+                            <div class="video-container">
+                                <span onclick="closeVideo()" class="close-btn">&times;</span>
+                                <video id="cottageVideo" controls>
+                                    <source src="./img/16,3,2/seconde__floor.mp4" type="video/mp4">
+                                    Ваш браузер не поддерживает видео.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
                     <p class="c161__badrooms">2 bedrooms</p>
                     <h2 class="c161__price">$150</h2>
                     <p class="c161__night">per night</p>
@@ -240,6 +255,28 @@
         window.location.href = "https://wa.me/+996550982121";
         hideChoicePanel();
     }
+
+    function openVideo() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('cottageVideo');
+    modal.style.display = 'flex';
+    video.play();
+  }
+
+  function closeVideo() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('cottageVideo');
+    video.pause();
+    video.currentTime = 0;
+    modal.style.display = 'none';
+  }
+
+  // Закрытие модального окна при клике вне видео
+  document.getElementById('videoModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+      closeVideo();
+    }
+  });
 </script>
 
 </html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color:black;">
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <img class="logo" src="./img/Logo Laguna 2.png" alt="">
+                <div class="btns">
+                    <div style="background: rgb(81, 9, 120);" class="header__btn-home">Home</div>
+                    <div class="header__btn-cottages">Cottages</div>
+                    <div class="header__btn-gallary">Gallery</div>
+                    <div class="header__btn-contact" onclick="scrollToBottom()">Contact</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__btns">
+                        <button class="hero__btn-cottages">Cottages</button>
+                        <button class="hero__btn-gallery">Gallery</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br>`
+        <section class="facilities">
+            <div class="container">
+                <div class="facilities__content">
+                    <div class="facilities__cards">
+                        <div class="facilities__card">
+                            <img class="facilities__img" src="./img/kitchen.png" alt="Kitchen Icon">
+                            <h2 class="facilities__title">Kitchen</h2>
+                            <p class="facilities__sub-title">A fully equipped kitchen, ideal for culinary creativity,
+                                with modern appliances and ample counter space for preparing delicious meals.</p>
+                        </div>
+
+                        <div class="facilities__card">
+                            <img class="facilities__img" src="./img/wifi.png" alt="">
+                            <h2 class="facilities__title">WI-FI</h2>
+                            <p class="facilities__sub-title">High-speed WiFi connectivity available throughout the
+                                premises, ensuring you stay connected whether for work or leisure . </p>
+                        </div>
+
+                        <div class="facilities__card">
+                            <img class="facilities__img" src="./img/football.png" alt="">
+                            <h2 class="facilities__title">Football court</h2>
+                            <p class="facilities__sub-title">A well-maintained football court, perfect for friendly
+                                matches or serious practice, offering a space for all ages to enjoy the game.</p>
+                        </div>
+
+                        <div class="facilities__card">
+                            <img class="facilities__img" src="./img/icon-park_basketball-stand.png" alt="">
+                            <h2 class="facilities__title">Basketball court</h2>
+                            <p class="facilities__sub-title">A professional-grade basketball court with high-quality
+                                flooring and hoops, ideal for both casual games and competitive play.</p>
+                        </div>
+                    </div>
+                    <div class="facilities__cards">
+                        <div class="facilities__card">
+                            <img class="facilities__img" src="./img/iconoir_bbq.png" alt="">
+                            <h2 class="facilities__title">BBQ zone</h2>
+                            <p class="facilities__sub-title">A dedicated BBQ zone with grills, seating, and a scenic
+                                backdrop, perfect for hosting gatherings and enjoying outdoor cooking.</p>
+                        </div>
+
+                        <div class="facilities__card">
+                            <img class="facilities__img" src="./img/mdi_tennis.png" alt="">
+                            <h2 class="facilities__title">Tennis court</h2>
+                            <p class="facilities__sub-title">A pristine tennis court, available for day or night play,
+                                complete with well-maintained surfaces and equipment for all skill levels.</p>
+                        </div>
+
+                        <div class="facilities__card">
+                            <img class="facilities__img" src="./img/beach.png" alt="">
+                            <h2 class="facilities__title">Private beach</h2>
+                            <p class="facilities__sub-title">An exclusive, clean private beach, offering soft sands and
+                                clear waters, where you can relax, swim, or enjoy the serene environment.</p>
+                        </div>
+
+                        <div class="facilities__card">
+                            <img class="facilities__img" src="./img/iconoir_balcony.png" alt="">
+                            <h2 class="facilities__title">Balcony</h2>
+                            <p class="facilities__sub-title">A secluded private balcony offering stunning views, a
+                                perfect spot to relax with a cup of coffee or unwind after a long day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <br><br><br><br>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__start">
+                    <img class="footer__img" src="./img/footer.png" alt="">
+                    <div class="footer__info">
+                        <h3 class="footer__title">
+                            Contact us
+                        </h3>
+                        <div class="footer__numbers">
+                            <img src="./img/telefon.png" alt="">
+                            <p class="footer__sub__title">+996 (550) 98 21 21 <br> +996 (555) 52 08 58</p>
+                        </div>
+
+                        <div class="footer__numbers">
+                            <img src="./img/uim_whatsapp.png" alt="">
+                            <p class="footer__sub__title">+996 (550) 98 21 21 <br> +996 (555) 52 08 58</p>
+                        </div>
+
+                        <div class="footer__numbers">
+                            <img src="./img/telega.png" alt="">
+                            <p class="footer__sub__title">+996 (550) 98 21 21 <br> +996 (555) 52 08 58</p>
+                        </div>
+                    </div>
+                </div>
+                <iframe class="maps"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64468.46207637231!2d77.47297261912031!3d42.6906683690495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388447ef7db54fe3%3A0x9696292302f839b!2z0KbQtdC90YLRgCDQvtGC0LTRi9GF0LAgItCb0LDQs9GD0L3QsCDQodC40YLQuCIgKExhZ3VuYSBDaXR5KQ!5e0!3m2!1sen!2skg!4v1751788953998!5m2!1sen!2skg"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    
+    const btn__cottages = document.querySelector('.header__btn-cottages')
+    const btn__cottages2 = document.querySelector('.hero__btn-cottages')
+    const btn__contact = document.querySelector('.header__btn-contact')
+    const btn__gallery = document.querySelector('.header__btn-gallary')
+    const btn__gallery2 = document.querySelector('.hero__btn-gallery')
+
+    btn__gallery.addEventListener('click', () => {
+        window.location.href = 'gallery.html';
+    });
+
+    btn__gallery2.addEventListener('click', () => {
+        window.location.href = 'gallery.html';
+    });
+
+    btn__contact.addEventListener('click', () => {
+        window.location.href = 'contact.html';
+    });
+
+    btn__cottages.addEventListener('click', () => {
+        window.location.href = 'cottages.html';
+    });
+
+    btn__cottages2.addEventListener('click', () => {
+        window.location.href = 'cottages.html';
+    });
+
+    x
+
+    // function scrollToBottom() {
+    //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    // }
+</script>
+
+</html>
